@@ -38,6 +38,18 @@ const Paragraph = styled.p`
   line-height: 1.5;
   max-width: 30%;
   text-align: center;
+
+  @media only screen and (max-width: 1600px) {
+    max-width: 50%;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    max-width: 60%;
+  }
+
+  @media only screen and (max-width: 700px) {
+    max-width: 70%;
+  }
 `;
 
 const GreenSpan = styled.span`
