@@ -10,8 +10,7 @@ const TopSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 13%;
-  z-index: 99;
+  padding-top: 2%;
 `;
 
 const Title = styled.h1`
@@ -38,6 +37,7 @@ const Paragraph = styled.p`
   line-height: 1.5;
   max-width: 30%;
   text-align: center;
+  z-index: 99;
 
   @media only screen and (max-width: 1600px) {
     max-width: 50%;

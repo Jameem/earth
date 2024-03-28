@@ -5,7 +5,7 @@ import CloudsMap from '../../assets/8k_earth_clouds.jpg';
 import MoonMap from '../../assets/moon texture.jpg';
 import { useFrame, useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three';
-import { Stars } from '@react-three/drei';
+import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 import { MutableRefObject, useEffect, useRef } from 'react';
 
@@ -59,7 +59,7 @@ export function Earth() {
         fade
       />
       <mesh ref={cloudsRef} position={[0, 0, 3]}>
-        <sphereGeometry args={[1.005, 32, 32]} />
+        <sphereGeometry args={[0.7, 32, 32]} />
         <meshPhongMaterial
           map={cloudsMap}
           opacity={0.4}
@@ -69,7 +69,7 @@ export function Earth() {
         />
       </mesh>
       <mesh ref={earthRef} position={[0, 0, 3]}>
-        <sphereGeometry args={[1, 32, 32]} />
+        <sphereGeometry args={[0.7, 32, 32]} />
         <meshPhongMaterial specularMap={specularMap} />
         <meshStandardMaterial
           map={dayMap}
@@ -78,6 +78,14 @@ export function Earth() {
           roughness={0.7}
         />
       </mesh>
+      <OrbitControls
+        enableZoom
+        enablePan
+        enableRotate
+        zoomSpeed={0.6}
+        panSpeed={0.5}
+        rotateSpeed={0.4}
+      />
     </>
   );
 }

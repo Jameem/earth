@@ -13,11 +13,13 @@ const Paragraph = styled.p`
   line-height: 1.5;
   max-width: 30%;
   text-align: center;
+  z-index: 99;
 `;
 
 const Social = styled.div`
   display: flex;
   gap: 10px;
+  z-index: 99;
 `;
 
 export function Footer() {
